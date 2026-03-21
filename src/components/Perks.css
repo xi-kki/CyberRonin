@@ -1,0 +1,131 @@
+.perks {
+  position: relative;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.perks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10vw;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(242, 255, 65, 0.05) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.perks-header {
+  position: relative;
+  z-index: 2;
+}
+
+.perks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.perk-card {
+  display: flex;
+  overflow: hidden;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(65, 255, 137, 0.1);
+  border-color: rgba(65, 255, 137, 0.3);
+}
+
+.perk-tag {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-neon-green);
+  border: 1px solid var(--accent-neon-green);
+  padding: 4px 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  width: fit-content;
+  background: rgba(65, 255, 137, 0.05);
+  box-shadow: 0 0 10px rgba(65, 255, 137, 0.1);
+}
+
+.perk-card.reverse .perk-tag {
+  color: var(--accent-neon-yellow);
+  border-color: var(--accent-neon-yellow);
+  background: rgba(242, 255, 65, 0.05);
+  box-shadow: 0 0 10px rgba(242, 255, 65, 0.1);
+}
+
+.perk-content {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perk-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--accent-neon-yellow);
+}
+
+.perk-content p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.perk-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.perk-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.perk-card:hover .perk-image img {
+  transform: scale(1.05);
+}
+
+.perk-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.perk-card.reverse .perk-content h3 {
+  color: var(--accent-neon-green);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perk-card, .perk-card.reverse {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .perk-image {
+    height: 250px;
+  }
+  
+  .perk-content {
+    padding: 30px 20px;
+  }
+  
+  .perk-content h3 {
+    font-size: 1.4rem;
+  }
+}

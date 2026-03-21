@@ -1,0 +1,136 @@
+.economy {
+  position: relative;
+  background-image: radial-gradient(circle at 50% 50%, rgba(65, 255, 137, 0.05) 0%, transparent 60%);
+  min-height: 800px;
+}
+
+.economy-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tokenomics-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-figure {
+  z-index: 5;
+  width: 250px;
+  position: relative;
+}
+
+.center-figure img {
+  width: 100%;
+  border-radius: 20px;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.figure-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(242, 255, 65, 0.2) 0%, transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.stats-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.stat-node {
+  position: absolute;
+  padding: 20px 30px;
+  border-radius: 50px;
+  text-align: center;
+  min-width: 200px;
+  pointer-events: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(65, 255, 137, 0.3);
+}
+
+.stat-node h4 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.stat-node p {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Positioning */
+.node-top-left {
+  top: 10%;
+  left: 5%;
+  animation: float 5s ease-in-out infinite alternate;
+}
+
+.node-top-right {
+  top: 15%;
+  right: 5%;
+  animation: float 6s ease-in-out infinite alternate-reverse;
+}
+
+.node-bottom-left {
+  bottom: 15%;
+  left: 5%;
+  animation: float 5.5s ease-in-out infinite alternate-reverse;
+}
+
+.node-bottom-right {
+  bottom: 10%;
+  right: 5%;
+  animation: float 4.5s ease-in-out infinite alternate;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tokenomics-container {
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .stats-circle {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stat-node {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    animation: none;
+    transform: none;
+  }
+}
