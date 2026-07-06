@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './FAQ.css';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+/** Accordion FAQ section — answers common questions about mint, utilities, and launch. */
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 

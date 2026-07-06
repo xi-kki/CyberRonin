@@ -1,6 +1,7 @@
 import './Perks.css';
 import { IMAGES } from '../assets/images';
 
+/** Member perks section — highlights benefits of holding a CyberRonin NFT. */
 const Perks = () => {
   return (
     <section id="perks" className="perks section-padding">

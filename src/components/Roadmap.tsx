@@ -2,7 +2,7 @@ import './Roadmap.css';
 
 const Roadmap = () => {
   return (
-    <section className="roadmap section-padding">
+    <section id="roadmap" className="roadmap section-padding">
       <div className="container">
         <div className="roadmap-header">
           <h2 className="section-title">IN <span className="text-gradient">3 STEPS</span></h2>

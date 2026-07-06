@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './Header.css';
 import { Menu, X } from 'lucide-react';
 
+/** Top navigation bar with sticky scroll effect, mobile hamburger menu, and wallet connect dropdown. */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,6 +1,7 @@
 import './ShadowEconomy.css';
 import { IMAGES } from '../assets/images';
 
+/** Shadow Economy section — tokenomics, staking, and ecosystem mechanics for $SHADOW token. */
 const ShadowEconomy = () => {
   return (
     <section id="economy" className="economy section-padding">

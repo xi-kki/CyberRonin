@@ -3,6 +3,7 @@ import './Collection.css';
 import { IMAGES } from '../assets/images';
 import ConnectModal from './ConnectModal';
 
+/** Collection showcase section — split images with connect-to-view modal. */
 const Collection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

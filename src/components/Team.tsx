@@ -1,6 +1,7 @@
 import './Team.css';
 import { IMAGES } from '../assets/images';
 
+/** Team section — profile cards for the CyberRonin founders and core contributors. */
 const Team = () => {
   return (
     <section id="team" className="team section-padding">

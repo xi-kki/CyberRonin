@@ -1,10 +1,13 @@
 import './ConnectModal.css';
 import { X, ExternalLink } from 'lucide-react';
 
+/** Props for the wallet connection modal overlay. */
 interface ConnectModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+/** Modal dialog that lists supported wallet providers (MetaMask, Coinbase, WalletConnect, Phantom). */
 
 const ConnectModal = ({ isOpen, onClose }: ConnectModalProps) => {
   if (!isOpen) return null;

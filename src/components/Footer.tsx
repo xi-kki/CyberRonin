@@ -1,6 +1,7 @@
 import './Footer.css';
 import { Twitter, DiscIcon as Discord, Github } from 'lucide-react';
 
+/** Site footer with links, social icons, and copyright. */
 const Footer = () => {
   return (
     <footer className="footer">

@@ -2,6 +2,7 @@ import './Hero.css';
 import { IMAGES } from '../assets/images';
 import { ArrowRight } from 'lucide-react';
 
+/** Main hero section with NFT preview, stat panels, animated title, and CTA button. */
 const Hero = () => {
   return (
     <section className="hero">
