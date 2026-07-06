@@ -8,6 +8,7 @@ import Team from './components/Team';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
+/** Root application component — assembles all landing page sections. */
 function App() {
   return (
     <div className="app">
