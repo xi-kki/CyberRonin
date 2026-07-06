@@ -1,5 +1,6 @@
 import './Roadmap.css';
 
+/** Project roadmap timeline — 3-step process for minting a CyberRonin warrior. */
 const Roadmap = () => {
   return (
     <section id="roadmap" className="roadmap section-padding">
